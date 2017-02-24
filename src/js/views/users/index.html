@@ -1,0 +1,13 @@
+<h1>Users</h1>
+<div class="media" ng-repeat="user in usersIndex.users">
+  <div class="media-left">
+    <a ui-sref="#">
+      <img class="media-object" ng-src="{{ user.image }}">
+    </a>
+  </div>
+  <div class="media-body">
+    <a ui-sref="usersShow({id:user.id})"><h4 class="media-heading">{{ user.first_name }} {{ user.last_name }}</h4></a>
+  </div>
+      <button><a ui-sref="usersShow({id: user.id})">Details</a></button>
+      <button ng-click="usersIndex.delete()">Delete</button>
+</div>

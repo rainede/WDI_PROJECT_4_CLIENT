@@ -1,0 +1,23 @@
+<section class="postsIndex">
+  <div class="container">
+    <div class="panel panel-default" ng-repeat="post in postsIndex.posts">
+      <h2>{{post.text}}</h2>
+      <div layout="row">
+        <h4>Joy</h4>
+        <uib-progressbar class="progress-striped active" max="1" value="post.joy" type="success"></uib-progressbar>
+
+        <h4>Fear</h4>
+        <uib-progressbar class="progress-striped active" max="1" value="post.fear" type="warning"></uib-progressbar>
+
+        <h4>Anger</h4>
+        <uib-progressbar class="progress-striped active" max="1" value="post.anger" type="danger"></uib-progressbar>
+
+        <h4>Sadness</h4>
+        <uib-progressbar class="progress-striped active" max="1" value="post.sadness" type="info"></uib-progressbar>
+
+        <h4>Disgust</h4>
+        <uib-progressbar class="progress-striped active" max="1" value="post.sadness" type="danger"></uib-progressbar>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,94 @@
+<section class="usersShow">
+  <div class="container">
+    <div class="row">
+      <div class="userLogo pull-right" style="background-image: url('{{usersShow.user.image}}')"></div>
+      <h1 class=><span class="userName">{{usersShow.user.name}}</span></h1>
+      <h3><span class="userDescription">{{usersShow.user.description}}</span></h3>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-md-6">
+        <h2>posts</h2>
+      </div>
+      <div class="col-md-3 md-menu">
+        <div class="md-menu-container" layout-align="center center" layout="column">
+          <md-menu ng-model="toShow">
+            <md-button aria-label="Open Sort options menu" ng-click="usersShow.openMenu($mdMenu, $event)">Limit posts Showing</md-button>
+            <md-menu-content width="4">
+              <md-menu-item>
+                <md-button ng-click="usersShow.maxNum(5)" value="5">5</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="usersShow.maxNum(10)">10</md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="usersShow.maxNum(25)">25</md-button>
+              </md-menu-item>
+              <md-menu-divider></md-menu-divider>
+              <md-menu-item>
+                <md-button ng-click="usersShow.maxNum(1000000000)">All</md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="md-menu-container" layout-align="center center" layout="column">
+          <md-menu ng-model="toShow">
+            <md-button aria-label="Open Sort options menu" ng-click="usersShow.openMenu($mdMenu, $event)">Sort By</md-button>
+            <md-menu-content width="4">
+              <md-menu-item>
+                <md-button ng-click="usersShow.sortMethod('score')">
+                  Score - Low to High
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="usersShow.sortMethod('-score')">
+                  Score - High to Low
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="usersShow.sortMethod('-engage')">
+                  Popular
+                </md-button>
+              </md-menu-item>
+              <md-menu-divider></md-menu-divider>
+              <md-menu-item>
+                <md-button ng-click="usersShow.sortMethod('-createdAt')">
+                  Newest First
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="usersShow.sortMethod('createdAt')">
+                  Oldest First
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+        </div>
+      </div>
+    </div>
+
+    <!-- <li ng-repeat="post in usersShow.user.posts | orderBy:  usersShow.sortBy"
+    ng-animate="'animate'"
+    ng-show="$index < usersShow.toShow">
+      <div class="panel panel-default">
+      <h2>  {{post.post}}  </h2>
+      <p class="postsAuthor">by {{ post.randomUsername}} <small>on</small> {{ post.createdAt }}</p>
+      <img ng-if="post.image" ng-src="{{post.image}}" alt="">
+      <div layout="row">
+        <div class="md-panel-content">
+
+
+          <form ng-submit="emotion.login()">
+            <div>
+              <input type="emotion" name="emotion" ng-model="login.user.password" placeholder="I am feeling...">
+            </div>
+            <input type="submit" value="Share Emotion">
+          </form>
+    </div> -->
+  </div>
+</div>
+</li>
+</div>
+</section>

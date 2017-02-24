@@ -1,0 +1,29 @@
+<section class="usersShow">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1>Welcome {{ usersShow.user.first_name }}</h1>
+        <h3>Your information</h3>
+        <h4><b>Email</b> - {{ usersShow.user.email }}</h4>
+        <button class="btn btn-primary userShowBtn" ui-sref ="usersUpdate({id: usersShow.user._id})" type="button" name="button">Edit Profile</button>
+        <button class="btn btn-primary userShowBtn" ui-sref ="usersDelete({ id: usersShow.user._id})" type="button" name="button">Delete Profile</button>
+      </div>
+      </div>
+      <div class="col-md-6"  ng-if="usersShow.user.posts.length">
+            <h2>Your posts</h2>
+
+          <div class="col-md-6">
+            <div class="posts">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-3 col-xs-4" ui-sref="#" ng-repeat="post in usersShow.user.posts">
+                    <h3><strong>{{posts.text}</strong></h3>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  </div>
+</section>

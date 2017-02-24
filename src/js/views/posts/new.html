@@ -1,0 +1,25 @@
+<section class="postsNew">
+  <div class="container">
+    <div class="row">
+      <input id="happy" type="radio" name="smiley" value="Happy">
+      <label for="happy">:)</label>
+      <input id="normal" type="radio" name="smiley" value="Normal">
+      <label for="normal">:|</label>
+      <input id="angry" type="radio" name="smiley" value="Angry">
+      <label for="angry">:(</label>
+      <div class="smiley">
+        <div class="eyes">
+          <div class="eye"></div>
+          <div class="eye"></div>
+        </div>
+        <div class="mouth"></div>
+      </div>
+    </div>
+  </div>
+  <form ng-submit="postsNew.create(postsNew.post)">
+    <div class="form-group">
+      <input class="form-control" type="text" placeholder="Tell me how you feel!" ng-model="postsNew.post.text">
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Create post</button>
+  </form>
+</section>
