@@ -1,6 +1,6 @@
 <section class="postsIndex">
   <div class="container">
-    <div class="panel panel-default" ng-repeat="post in postsIndex.posts">
+    <div class="panel panel-default" ng-repeat="post in postsIndex.posts | orderBy: '-'">
       <h2>{{post.text}}</h2>
       <div layout="row">
         <h4>Joy</h4>
@@ -16,7 +16,7 @@
         <uib-progressbar class="progress-striped active" max="1" value="post.sadness" type="info"></uib-progressbar>
 
         <h4>Disgust</h4>
-        <uib-progressbar class="progress-striped active" max="1" value="post.sadness" type="danger"></uib-progressbar>
+        <uib-progressbar class="progress-striped active" max="1" value="post.disgust" type="danger"></uib-progressbar>
       </div>
     </div>
   </div>
