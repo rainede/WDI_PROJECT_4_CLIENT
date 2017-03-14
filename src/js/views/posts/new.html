@@ -1,6 +1,9 @@
 <section class="postsNew">
   <div class="container">
     <div class="row">
+      <h3>Please log your experience!</h3>
+    </div>
+    <div class="row">
       <input id="happy" type="radio" name="smiley" value="Happy">
       <label for="happy">:)</label>
       <input id="normal" type="radio" name="smiley" value="Normal">
@@ -18,8 +21,8 @@
   </div>
   <form ng-submit="postsNew.create(postsNew.post)">
     <div class="form-group">
-      <input class="form-control" type="text" placeholder="Tell me how you feel!" ng-model="postsNew.post.text">
+      <input class="form-control" type="text" placeholder="What happened?" ng-model="postsNew.post.text">
     </div>
-    <button type="submit" class="btn btn-primary btn-block">Create post</button>
+    <button type="submit" class="btn btn-primary btn-block">Analyse me!</button>
   </form>
 </section>
